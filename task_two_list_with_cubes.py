@@ -22,12 +22,12 @@ for numb in list_cubes:
 print(list_sum_number)
 
 # Инкремент на 17, элементов списка с кубами list_cubes
-print([x+17 for x in list_cubes])
+print([x + 17 for x in list_cubes])
 
 list_sum_number.clear()
 
 # Поиск элементов списка у которых сумма цифр делется на 7 без остатка.
-for numb in [x+17 for x in list_cubes]:
+for numb in [x + 17 for x in list_cubes]:
     memo_numb = numb
     sum_number = 0
     while numb:
@@ -37,8 +37,3 @@ for numb in [x+17 for x in list_cubes]:
         list_sum_number.append(memo_numb)
 
 print(list_sum_number)
-
-
-
-
-
