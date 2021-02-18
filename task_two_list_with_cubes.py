@@ -21,7 +21,7 @@ for numb in list_cubes:
 # Список элементов у которых сумма цифр делется на 7 без остатка.
 print(list_sum_number)
 
-# Инкремент на 17, элементов списка с кубами list_cubes
+# Инкремент на 17, элементов списка с кубами list_cubes.
 print([x + 17 for x in list_cubes])
 
 list_sum_number.clear()
