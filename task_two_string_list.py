@@ -31,10 +31,9 @@ for idx, item in enumerate(str_list):
             summary += item
     else:
         count_camels += 1
-        if count_camels != 0:
-            summary += item
-            if count_camels == 2 and idx < len(str_list) - 1:
-                summary += " "
-                count_camels = 0
+        summary += item
+        if count_camels == 2 and idx < len(str_list) - 1:
+            summary += " "
+            count_camels = 0
 
 print(summary)
