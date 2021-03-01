@@ -6,8 +6,16 @@ prises_list = [0.04, 80.5, 234.06, 10.05, 160.5, 49.5, 13.68, 182.07, 183.67, 14
 for price in prises_list:
     print(f"{int(price):02} руб {int((price - int(price)) * 100):02} коп", end=", ")
 
-print("\n")
-print(id(prises_list))
+print("\n", id(prises_list))
+
+print("\n\n", "*" * 30)
+#  ----------Как было нужно отделить копейки---------------------------
+for i in prises_list:
+    rub, kop = str(f"{i:.2f}").split(".")
+    print(f"{rub} руб {int(kop):02d} коп", end=" ")
+#  --------------------------------------------------------------------
+print("\n\n", "*" * 30)
+
 
 # 2. Цены, отсортированные по возрастанию, новый список не создавать.
 prises_list.sort()
