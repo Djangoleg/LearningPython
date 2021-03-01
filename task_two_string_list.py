@@ -37,3 +37,19 @@ for idx, item in enumerate(str_list):
             count_camels = 0
 
 print(summary)
+print("*" * 30)
+#  -------------------------------------------------Способ 2--------------------------------------------------
+str_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+summary_list = []
+
+for i in str_list:
+    if i.replace("+", "").replace("-", "").isdigit():
+        if i.isdigit():
+            summary_list.append(f"'{int(i):02}'")
+        else:
+            summary_list.append(f"'{i[0]}{int(i[1:]):02}'")
+    else:
+        summary_list.append(i)
+
+print(summary_list)
+print(" ".join(summary_list))
