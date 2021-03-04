@@ -24,12 +24,12 @@ def currency_rates(*args):
         if key and value:
             val_dict[key.lower()] = round(Decimal(value.replace(',', '.')), 2)
 
-    for code in args:
+    for code in sorted(args):
         code = code.lower()
         if val_dict.get(code):
-            summary_list.append(f"{val_dict.get(code)}, {val_dict.get('date'):%m.%d.%Y}")
+            summary_list.append(f"{str(code).upper()} : {val_dict.get(code)}, {val_dict.get('date'):%m.%d.%Y}")
         else:
-            summary_list.append(str(val_dict.get(code)))
+            summary_list.append(f"{str(code).upper()} : {str(val_dict.get(code))}")
 
     return '\n'.join(summary_list)
 
