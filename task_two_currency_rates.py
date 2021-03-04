@@ -20,7 +20,7 @@ def currency_rates(*args):
     tmp_list = tmp_list[1::]
 
     for row in tmp_list:
-        key, value = row.split('</CharCode>')[0][-3::], row.split('<Value>')[1].split('</Value>')[0]
+        key, value = row.split('<CharCode>')[1].split('</CharCode>')[0], row.split('<Value>')[1].split('</Value>')[0]
         if key and value:
             val_dict[key.lower()] = round(Decimal(value.replace(',', '.')), 2)
 
