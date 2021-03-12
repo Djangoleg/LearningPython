@@ -9,6 +9,7 @@
 <br>
 Решение по задаче 6 - task_six_show_sales.py, task_six_add_sales.py<br>
 Запуск в терминале:<br>
+&nbsp;Python task_six_add_sales.py 111<br>
 &nbsp;Python task_six_show_sales.py<br>
 &nbsp;Python task_six_show_sales.py 3<br>
 &nbsp;Python task_six_show_sales.py 1 6<br>
