@@ -1,4 +1,5 @@
 import os.path
+import sys
 
 
 def create_users_hobby(argv):
@@ -16,7 +17,7 @@ def create_users_hobby(argv):
         print(f"{args[0]} - файл не существует!")
         return
 
-    if not os.path.isfile(args[0]):
+    if not os.path.isfile(args[1]):
         print(f"{args[1]} - файл не существует!")
         return
 
@@ -43,6 +44,4 @@ def create_users_hobby(argv):
 
 
 if __name__ == '__main__':
-    import sys
-
     create_users_hobby(sys.argv)
