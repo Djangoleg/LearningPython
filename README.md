@@ -13,4 +13,7 @@
 &nbsp;Python task_six_show_sales.py<br>
 &nbsp;Python task_six_show_sales.py 3<br>
 &nbsp;Python task_six_show_sales.py 1 6<br>
-Решение по задаче 7 - в процессе<br>
+Решение по задаче 7 - task_seven_edit_sales.py<br>
+Запуск в терминале:<br>
+&nbsp;Python task_seven_edit_sales.py 8 1476,58<br>
+
