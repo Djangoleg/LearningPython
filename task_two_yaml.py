@@ -17,7 +17,7 @@ try:
                         make_path(x, dir_path)
                     elif isinstance(x, str):
                         with open(os.path.join(dir_path, x), "w") as f:
-                            f.write("")
+                            pass
 
 
     with open(yaml_config_path, 'r', encoding="utf-8") as yaml_file:
