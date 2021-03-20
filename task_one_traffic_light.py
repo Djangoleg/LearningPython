@@ -2,25 +2,31 @@ import time
 
 
 class TrafficLight:
-    __color = ["Red", "Yellow", "Green"]
+    __color = str()
 
-    def __signals_change(self):
-        print("\033[31m {}".format(self.__color[0]))
-        time.sleep(7)
-        print("\033[33m {}".format(self.__color[1]))
-        time.sleep(2)
-        print("\033[32m {}".format(self.__color[2]))
-        time.sleep(5)
+    def __signals_change(self, color, timeout):
+        if color == "Red":
+            self.__color = "\033[31m {}".format(color)
+        elif color == "Yellow":
+            self.__color = "\033[33m {}".format(color)
+        elif color == "Green":
+            self.__color = "\033[32m {}".format(color)
+        print(self.__color)
+        time.sleep(timeout)
 
     def running(self, cycles_number=None):
         if cycles_number:
             count = 0
             while count < cycles_number:
-                self.__signals_change()
+                self.__signals_change("Red", 7)
+                self.__signals_change("Yellow", 2)
+                self.__signals_change("Green", 5)
                 count += 1
         else:
             while True:
-                self.__signals_change()
+                self.__signals_change("Red", 7)
+                self.__signals_change("Yellow", 2)
+                self.__signals_change("Green", 5)
 
 
 t = TrafficLight()
