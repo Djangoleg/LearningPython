@@ -2,9 +2,9 @@ from turtle import Screen, Turtle
 
 
 class Stationery:
-    _title = str()
+    title = str()
 
-    def _set_turtle(self, color, pensize=1):
+    def set_turtle(self, color, pensize=1):
         turtle = Turtle()
         turtle.color(color)
         turtle.pensize(pensize)
@@ -22,7 +22,7 @@ class Pen(Stationery):
 
     def draw(self):
         print(f"Рисует {self._title}.")
-        self._set_turtle('blue')
+        self.set_turtle('blue')
         Screen().resetscreen()
 
 
@@ -33,7 +33,7 @@ class Pencil(Stationery):
 
     def draw(self):
         print(f"Рисует {self._title}.")
-        self._set_turtle('grey')
+        self.set_turtle('grey')
         Screen().resetscreen()
 
 
@@ -44,7 +44,7 @@ class Handle(Stationery):
 
     def draw(self):
         print(f"Рисует {self._title}.")
-        self._set_turtle('red', 10)
+        self.set_turtle('red', 10)
         Screen().exitonclick()
 
 
