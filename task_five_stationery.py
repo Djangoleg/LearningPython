@@ -1,7 +1,15 @@
 from turtle import Screen, Turtle
 
+
 class Stationery:
     _title = str()
+
+    def _set_turtle(self, color, pensize=1):
+        turtle = Turtle()
+        turtle.color(color)
+        turtle.pensize(pensize)
+        turtle.forward(300)
+        turtle.left(90)
 
     def draw(self):
         print("Запуск отрисовки.")
@@ -14,12 +22,8 @@ class Pen(Stationery):
 
     def draw(self):
         print(f"Рисует {self._title}.")
-        turtle = Turtle()
-        turtle.color('blue')
-        turtle.forward(300)
-        turtle.left(90)
-        screen = Screen()
-        screen.resetscreen()
+        self._set_turtle('blue')
+        Screen().resetscreen()
 
 
 class Pencil(Stationery):
@@ -29,12 +33,8 @@ class Pencil(Stationery):
 
     def draw(self):
         print(f"Рисует {self._title}.")
-        turtle = Turtle()
-        turtle.color('grey')
-        turtle.forward(300)
-        turtle.left(90)
-        screen = Screen()
-        screen.resetscreen()
+        self._set_turtle('grey')
+        Screen().resetscreen()
 
 
 class Handle(Stationery):
@@ -44,13 +44,8 @@ class Handle(Stationery):
 
     def draw(self):
         print(f"Рисует {self._title}.")
-        turtle = Turtle()
-        turtle.pensize(10)
-        turtle.color('red')
-        turtle.forward(300)
-        turtle.left(90)
-        screen = Screen()
-        screen.exitonclick()
+        self._set_turtle('red', 10)
+        Screen().exitonclick()
 
 
 Stationery().draw()
