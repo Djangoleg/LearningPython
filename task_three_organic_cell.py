@@ -4,7 +4,7 @@ class Cell:
         self.cell = cell
 
     def __str__(self):
-        pass
+        return f"{self.cell}"
 
     def __add__(self, other):
         return self.cell + other.cell
