@@ -1,2 +1,8 @@
-# LearningPython
-My name is Oleg. Learning Python in Geekbrains. Python Basics Course.
+# Здравствуйте. Урок 11.
+Решение по задаче 1 - task_one_date.py<br>
+Решение по задаче 2 - task_two_my_except.py<br>
+Решение по задаче 3 - <br>
+Решение по задаче 4 - <br>
+Решение по задаче 5 - <br>
+Решение по задаче 6 - <br>
+Решение по задаче 7 - <br>
