@@ -131,7 +131,7 @@ print("Оргтехника на склад:")
 print(p1, p2, s1, s2, c, sep="; ")
 print("*" * 20)
 
-# Убираем всю оргтехгику на склад.
+# Убираем всю оргтехнику на склад.
 w = Warehouse(org="Test_org", org_unit="Test_org_unit")
 for x in [p1, p2, s1, s2, c]:
     w.set_equipment(x)
