@@ -1,4 +1,9 @@
 class ComplexNumber:
+    """
+    Вот как тут не мухлевать?
+    Python сам складывает и умножает комплексные числа.
+    Главное тип :-)
+    """
     def __init__(self, complex_number):
         self.complex = complex(complex_number)
 
