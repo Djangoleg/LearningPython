@@ -3,7 +3,7 @@ class NotNumber(Exception):
         self.txt = txt
 
 
-def try_parse_int(s):
+def try_check_int(s):
     try:
         int(s)
         return True
@@ -11,7 +11,7 @@ def try_parse_int(s):
         return False
 
 
-def try_parse_float(s):
+def try_check_float(s):
     try:
         float(s)
         return True
@@ -25,10 +25,9 @@ num_list = list()
 
 while inp_data.lower() != "stop" and inp_data.lower() != "exit":
     try:
-        if try_parse_int(inp_data):
+        if try_check_int(inp_data):
             num_list.append(int(inp_data))
-
-        elif try_parse_float(inp_data):
+        elif try_check_float(inp_data):
             num_list.append(float(inp_data))
         else:
             raise NotNumber(f"\nВы ввели - '{inp_data}'. Это не число!")
